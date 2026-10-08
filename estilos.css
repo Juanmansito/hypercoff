@@ -1,0 +1,131 @@
+/* Estilos generales y colores de la marca */
+:root {
+  --color-principal: #1452dd;
+  --color-secundario: #1555e8;
+  --color-acento: #b7ccff;
+  --color-fondo: #f5f6f3;
+  --color-texto: #111319;
+  --color-suave: #e7eaf1;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-fondo); color: var(--color-texto); font-family: Arial, sans-serif; line-height: 1.65; }
+img { display: block; max-width: 100%; height: auto; object-fit: cover; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { margin: 0; font-family: Helvetica, Arial, sans-serif; line-height: 1.08; letter-spacing: -0.04em; }
+h1 { font-size: clamp(3.4rem, 7vw, 6.8rem); }
+h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+h3 { font-size: 1.55rem; }
+em { color: var(--color-secundario); font-weight: 400; }
+.encabezado { min-height: 88px; padding: 18px 7%; display: flex; justify-content: space-between; align-items: center; gap: 24px; background: var(--color-fondo); }
+.marca { display: flex; align-items: center; gap: 11px; font-family: Helvetica, Arial, sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: .08em; line-height: 1.1; }
+.marca-icono { display: flex; align-items: center; justify-content: center; width: 43px; height: 43px; border-radius: 50%; background: var(--color-principal); color: white; font-size: 1.3rem; }
+.marca-acento { color: var(--color-secundario); }
+.marca small { display: block; margin-top: 5px; font-size: .55rem; letter-spacing: .22em; font-weight: 500; }
+.menu { display: flex; align-items: center; gap: clamp(15px, 3vw, 38px); font-size: .86rem; }
+.menu a, .pie-enlaces a { transition: color .2s ease; }
+.menu a:hover, .pie-enlaces a:hover { color: var(--color-secundario); }
+.menu .menu-cta { padding: 10px 19px; background: var(--color-principal); border-radius: 3px; color: white; }
+.menu .menu-cta:hover { background: var(--color-secundario); }
+.hero { min-height: 610px; display: flex; align-items: stretch; background: #f0f2f6; }
+.hero-texto { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 70px 5% 70px 10%; }
+.etiqueta { margin: 0 0 20px; color: var(--color-secundario); font-size: .72rem; font-weight: 700; letter-spacing: .19em; }
+.hero-descripcion { max-width: 440px; margin: 25px 0; font-size: 1.08rem; color: #585b53; }
+.boton { display: inline-flex; justify-content: center; align-items: center; gap: 22px; min-height: 49px; padding: 13px 22px; border: 0; border-radius: 3px; font-weight: 700; cursor: pointer; transition: background-color .2s ease, transform .2s ease; }
+.boton:hover { transform: translateY(-2px); background: var(--color-secundario); }
+.boton-oscuro { background: var(--color-principal); color: white; }
+.nota-hero { margin: 42px 0 0; color: #77786f; font-size: .76rem; letter-spacing: .04em; }
+.hero-imagen { position: relative; flex: 1; min-height: 610px; }
+.hero-imagen img { width: 100%; height: 100%; position: absolute; inset: 0; }
+.sello { position: absolute; bottom: 32px; left: -42px; width: 112px; height: 112px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; background: var(--color-acento); color: var(--color-principal); text-align: center; font-size: .72rem; font-weight: 700; line-height: 1.1; letter-spacing: .12em; }
+.sello b { margin-top: 5px; font-size: 1.1rem; }
+.seccion { padding: 105px 9%; }
+.nosotros { display: flex; align-items: center; gap: 9%; }
+.nosotros-imagen { flex: 1; height: 480px; }
+.nosotros-imagen img { width: 100%; height: 100%; }
+.nosotros-texto { flex: 1; max-width: 500px; }
+.nosotros-texto p:not(.etiqueta) { color: #65675f; }
+.enlace-flecha { color: var(--color-principal); font-weight: 700; font-size: .9rem; }
+.enlace-flecha:hover, .tarjeta a:hover { color: var(--color-secundario); }
+.nosotros-texto .enlace-flecha { display: inline-block; margin-top: 12px; }
+.menu-seccion { background: #f0f2f6; }
+.seccion-cabecera { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 40px; }
+.tarjetas { display: flex; flex-wrap: wrap; gap: 22px; }
+.tarjeta { flex: 1 1 28%; min-width: 245px; overflow: hidden; background: var(--color-fondo); }
+.tarjeta img { width: 100%; height: 225px; transition: transform .35s ease; }
+.tarjeta:hover img { transform: scale(1.035); }
+.tarjeta-texto { padding: 23px 24px 25px; }
+.numero { color: var(--color-secundario); font-size: .65rem; font-weight: 700; letter-spacing: .15em; }
+.tarjeta h3 { margin-top: 8px; }
+.tarjeta p { min-height: 55px; color: #66685f; font-size: .9rem; }
+.tarjeta a { color: var(--color-principal); font-size: .82rem; font-weight: 700; }
+.aclaracion { margin: 22px 0 0; color: #73746d; font-size: .78rem; }
+.experiencias { background: var(--color-principal); color: white; text-align: center; }
+.experiencias h2 em { color: var(--color-acento); }
+.experiencias .etiqueta { color: var(--color-acento); }
+.beneficios { display: flex; gap: 35px; margin-top: 55px; text-align: left; }
+.beneficios article { flex: 1; padding: 28px; border-top: 1px solid rgba(255,255,255,.35); }
+.beneficio-icono { color: var(--color-acento); font-size: 2rem; }
+.beneficios h3 { margin-top: 20px; font-size: 1.4rem; }
+.beneficios p { color: #d7ddd7; font-size: .92rem; }
+.tabla-seccion { background: #f0f2f6; }
+.tabla-intro { max-width: 260px; color: #6b6d65; }
+.tabla-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; background: #fbfaf6; }
+th, td { padding: 17px 19px; border-bottom: 1px solid #e3dfd5; }
+th { color: white; background: var(--color-principal); font-size: .78rem; letter-spacing: .06em; }
+td { font-size: .9rem; }
+td a { color: var(--color-principal); font-weight: 700; }
+td a:hover { color: var(--color-secundario); }
+.galeria-fotos { display: flex; flex-wrap: wrap; gap: 15px; }
+.galeria-fotos img { flex: 1 1 30%; width: 30%; height: 240px; }
+.contacto { display: flex; gap: 10%; align-items: flex-start; background: var(--color-secundario); }
+.contacto-texto { flex: 1; color: white; padding-top: 30px; }
+.contacto-texto .etiqueta { color: #f9dfbd; }
+.contacto-texto h2 em { color: #f3d39e; }
+.contacto-texto p:not(.etiqueta) { max-width: 430px; color: #fff0df; }
+.boton-claro { margin-top: 15px; background: white; color: var(--color-principal); }
+.formulario { flex: 1; max-width: 490px; padding: 32px; background: var(--color-fondo); }
+.formulario h3 { font-size: 1.65rem; }
+.formulario label { display: block; margin: 15px 0 5px; font-size: .82rem; font-weight: 700; }
+.formulario input, .formulario select, .formulario textarea { width: 100%; padding: 12px; border: 1px solid #d9d5cb; border-radius: 2px; background: white; color: var(--color-texto); font: inherit; }
+.formulario textarea { resize: vertical; }
+.formulario .boton { margin-top: 18px; }
+.form-nota { color: #73746d; font-size: .77rem; }
+.pie-pagina { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 25px; padding: 38px 8%; background: #111319; color: white; }
+.pie-pagina > p { color: #d5dcd6; font-size: .87rem; }
+.marca-pie { color: white; }
+.pie-enlaces { display: flex; gap: 20px; font-size: .82rem; }
+.copyright { flex-basis: 100%; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.2); color: #c4cec7; font-size: .75rem; }
+
+/* Ajustes para tablets y celulares */
+@media (max-width: 768px) {
+  .encabezado { flex-direction: column; padding: 18px 5%; }
+  .menu { flex-wrap: wrap; justify-content: center; gap: 12px 20px; }
+  .hero { flex-direction: column; }
+  .hero-texto { padding: 70px 8%; }
+  .hero-imagen { min-height: 430px; }
+  .sello { left: auto; right: 20px; bottom: 20px; }
+  .seccion { padding: 75px 7%; }
+  .nosotros, .contacto { flex-direction: column; }
+  .nosotros-imagen { width: 100%; height: 370px; }
+  .nosotros-texto { max-width: none; }
+  .seccion-cabecera { align-items: flex-start; flex-direction: column; }
+  .beneficios { flex-direction: column; gap: 14px; }
+  .beneficios article { padding: 22px 10px; }
+  .contacto-texto, .formulario { width: 100%; max-width: none; }
+  .galeria-fotos img { flex-basis: 45%; width: 45%; height: 200px; }
+  .pie-pagina { flex-direction: column; align-items: flex-start; }
+  .copyright { width: 100%; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 3.4rem; }
+  h2 { font-size: 2.6rem; }
+  .menu { gap: 10px 15px; font-size: .8rem; }
+  .menu .menu-cta { padding: 7px 12px; }
+  .tarjeta { min-width: 100%; }
+  .galeria-fotos img { flex-basis: 100%; width: 100%; height: 240px; }
+  .formulario { padding: 24px 18px; }
+  .pie-enlaces { flex-wrap: wrap; }
+}
